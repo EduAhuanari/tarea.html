@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 1 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        
+        .marco-exterior {
+            display: inline-block;
+            border: 1px solid #161616; /* Línea delgada exterior */
+            padding: 8px;
+            background-color: #ffffff;
+        }
+
+        #container {
+            display: grid;
+            width: 700px;
+            height: 400px;
+            background-color: #ffffff;
+            gap: 10px; 
+            
+            /* Distribución por áreas de la cuadrícula */
+            grid-template-areas: 
+                "uno dos dos tres"
+                "uno cinco siete tres"
+                "uno ocho seis cuatro";
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .caja {
+            width: 100%;
+            height: 100%;
+            color: rgb(251, 248, 248);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 1px solid black;
+            
+        }
+
+        /* Colores exactos de las áreas */
+        .uno { 
+            grid-area: uno; 
+            background-color: #188c35; 
+        }
+        .dos { 
+            grid-area: dos; 
+            background-color: #1d8e3f; 
+        }
+        .tres { 
+            grid-area: tres; 
+            background-color:#f12626 ; 
+        }
+        .cuatro { 
+            grid-area: cuatro; 
+            background-color: #22b14c; 
+        }
+        .cinco { 
+            grid-area: cinco; 
+            background-color: #ffc90e; 
+        }
+        .seis { 
+            grid-area: seis; 
+            background-color: #ffc90e; 
+        }
+        .siete { 
+            grid-area: siete; 
+            background-color: #f12626; 
+        }
+        .ocho { 
+            grid-area: ocho; 
+            background-color: #f12626; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Grid 1</h1>
+
+    
+    <div class="marco-exterior">
+        <div id="container">
+            <div class="caja uno">UNO</div>
+            <div class="caja dos">DOS</div>
+            <div class="caja tres">TRES</div>
+            <div class="caja cuatro">CUATRO</div>
+            <div class="caja cinco">CINCO</div>
+            <div class="caja seis">SEIS</div>
+            <div class="caja siete">SIETE</div>
+            <div class="caja ocho">OCHO</div>
+        </div>
+    </div>
+
+</body>
+</html>
